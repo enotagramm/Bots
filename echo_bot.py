@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, executor, types
 
 from pprint import pprint
 
-from token import *
+from token_bot import *
 
 
 API_TOKEN: str = API_TOKEN_ECHO_BOT
