@@ -1,13 +1,17 @@
+import os
 from random import randint
 
+import dotenv
+from environs import Env
 from aiogram import Bot, Dispatcher, executor
 from aiogram.types import Message
 from aiogram.dispatcher.filters import Text
 
-from token_bot import API_TOKEN_GUESS_BOT
 
+env = Env()
+env.read_env()
 
-API_TOKEN: str = API_TOKEN_GUESS_BOT
+API_TOKEN: str = env('API_TOKEN_GUESS_BOT')
 bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher(bot)
 
