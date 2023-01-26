@@ -1,11 +1,11 @@
-import os
-
-import dotenv
 from aiogram import Bot, Dispatcher, executor, types
 
+from pprint import pprint
 
-dotenv.load_dotenv()
-API_TOKEN: str = os.getenv('API_TOKEN_ECHO_BOT')
+from token_bot import *
+
+
+API_TOKEN: str = API_TOKEN_ECHO_BOT
 
 bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher(bot)
