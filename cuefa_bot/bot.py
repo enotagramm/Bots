@@ -5,6 +5,7 @@ from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
 from handlers.other_handlers import register_other_handlers
 from handlers.user_handlers import register_user_handlers
+from keyboards.main_menu import set_main_menu
 
 
 # Инициализируем логгер
@@ -38,6 +39,9 @@ async def main():
 
     # Регистрируем все хэндлеры
     register_all_handlers(dp)
+
+    # Вызываем меню бота
+    await set_main_menu(dp)
 
     # Запускаем пуллинг
     try:
