@@ -1,7 +1,7 @@
 from pprint import pprint
 
 
-BOOK_PATH = '/Users/enotagramm/PycharmProjects/Bots/book_bot/book/book.txt'
+BOOK_PATH = 'book/book.txt'
 PAGE_SIZE = 1050
 
 book: dict[int, str] = {}
